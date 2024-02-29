@@ -1,0 +1,388 @@
+/* Start Variables */
+:root{
+    --main-color:rgba(0, 255, 255, 0.705);
+}
+/* End Variables */
+/* Start General Style */
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    position:relative;
+    width:100vw;
+    height:100vh;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:#444;
+    color:#fff;
+    transition:0.5s;
+}
+.minimize-body{
+    position:absolute;
+    transform-origin:bottom left;
+    transform:scale(0.15,0.05);
+    bottom:0;
+    width:100%;
+    height:100%;
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+.container{
+    width:95%;
+    margin:auto;
+}
+/* End General Style */
+/* Start Header */
+header{
+    padding:10px;
+    height:10vh;
+}
+.header-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.header-content .logo{
+    display:flex;
+    flex:0.1;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+header .button{
+    display:flex;
+    flex:0.1;
+    justify-content: space-between;
+    align-items: center;
+}
+header .button li{
+    width:45px;
+    text-align:center;
+}
+header .button li:hover{
+    background:#777;
+    border-radius:10px;
+}
+header .button span{
+    display:inline-block;
+}
+header .button .minimize{
+    height:30px;
+    line-height:20px;
+    padding:0 10px;
+}
+header .button .minimize span{
+    width:15px;
+    height:1px;
+    background:#fff;
+}
+header .button .size{
+    height:30px;
+    line-height:20px;
+    padding:0 15px;
+}
+header .button .size span{
+    width:15px;
+    height:15px;
+    border:1px solid #fff;
+    position:relative;
+    top:7px;
+}
+header .button .close {
+    line-height:30px;
+    padding:0 5px;
+    height:30px;
+}
+header .button .close i{
+    font-size:16px;
+}
+/* End Header */
+/* Start Menu */
+.menu{
+    padding:10px;
+    height:10vh;
+}
+.menu .container {
+    height:100%;
+}
+.menu-content{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.menu-content-info{
+    flex:0.12;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.menu-content-info .menu-button{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:35px;
+    padding:10px;
+    z-index:3;
+}
+.menu-content-info .menu-button:hover{
+    background:#666;
+    border-radius:10px;
+}
+.menu-content-info .menu-button span{
+    display:inline-block;
+    width:20px;
+    height:2px;
+    background:#fff;
+}
+.menu-content-info .menu-name{
+    font-size:25px;
+    font-weight:bold;
+}
+.menu-content .history{
+    padding:10px 10px;
+}
+.menu-content .history:hover{
+    background:#777;
+    border-radius:10px;
+}
+.menu-content .history i{
+    font-size:20px;
+}
+/* End Menu */
+/* Start Setting */
+.setting{
+    width:300px;
+    height:calc(100vh - 97px);
+    position:absolute;
+    bottom:0;
+    background:#777;
+    border-top-right-radius:10px;
+    z-index:2;
+    padding-top:50px;
+    transition:transform 0.2s;
+}
+.setting-scale{
+    transform:translate(-100%)
+}
+.setting-content{
+    width:100%;
+    height:99%;
+    position:relative;
+}
+.setting ul li{
+    padding:6px;
+    margin:5px;
+}
+.setting ul:first-of-type li:nth-child(2){
+    background:#888;
+}
+.setting ul li:not(.not-hover):hover{
+    background:#888;
+}
+.setting ul li i{
+    margin-right:20px;
+}
+.setting ul.setting-btn{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+/* End Setting */
+/* Start Monitor */
+.monitor{
+    padding:10px;
+    height:20vh;
+}
+.monitor .container{
+    height:100%;
+}
+.monitor-content{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.monitor-content-text{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:30px;
+    opacity:0.6;
+}
+.monitor-content-result{
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-size:60px;
+}
+@media (min-width:576px ) and (max-width:991px){
+    .monitor-content-text{
+        font-size:25px;
+    }
+    .monitor-content-result{
+        font-size:40px;
+    }
+}
+@media (max-width:575px){
+    .monitor-content-text{
+        font-size:20px;
+    }
+    .monitor-content-result{
+        font-size:30px;
+    }
+}
+/* End Monitor */
+/* Start memory */
+.memory{
+    padding:10px 30px;
+}
+.memory-content{
+    display:flex;
+    justify-content:space-between;
+}
+.memory-content span{
+    flex:1;
+    text-align:center;
+    padding:5px 0;
+    letter-spacing: 2px;
+}
+.memory-content span:not(.hidden,.vide):hover{
+    background:#777;
+    border-radius:10px;
+}
+.hidden{
+    color:#777;
+}
+/* End memory */
+/* Start Calc */
+.calc{
+    padding:10px;
+    height:200px;
+}
+.calc-content{
+    display:grid;
+    grid-template-columns:repeat(4,25%);
+    grid-gap:5px;
+}
+.calc-content span{
+    padding:15px;
+    text-align:center;
+    background:#555;
+}
+.calc-content span:nth-child(8) ~ span{
+    font-size:20px;
+}
+.calc-content sub{
+    font-size:20px;
+}
+span.minus{
+    display:inline-block;
+    padding:0;
+    width:12px;
+    height:1px;
+    background:#fff;
+    position:relative;
+    top:-8px;
+    max-height:100%;
+}
+span.divise span.minus{
+    top:-4px;
+} 
+span.delete{
+    display:inline-block;
+    border-width:2px;
+    border-style:solid;
+    border-color:#fff #fff #fff transparent;
+    padding:1px 3px 0px;
+    border-radius:2px;
+    font-size:12px;
+    position:relative;
+}
+span.delete::before{
+    content:'';
+    position:absolute;
+    height:2px;
+    width:12px;
+    background:#fff;
+    left:-13px;
+    top:-2px;
+    transform-origin:right top;
+    transform:rotate(-45deg);
+}
+span.delete::after{
+    content:'';
+    position:absolute;
+    height:2px;
+    width:12px;
+    background:#fff;
+    left:-12px;
+    bottom:-2px;
+    transform-origin:right top;
+    transform:rotate(45deg);
+}
+span.divise{
+    position:relative;
+    max-height:100%;
+}
+span.divise::before{
+    content:'';
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:#fff;
+    border-radius:50%;
+    left:50%;
+    top:42%;
+    transform:translateX(-50%)
+}
+span.divise::after{
+    content:'';
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:#fff;
+    border-radius:50%;
+    left:50%;
+    bottom:36%;
+    transform:translateX(-50%)
+}
+.calc-content span:hover{
+    background:#777;
+}
+.calc-content > span:last-of-type{
+    background:var(--main-color)
+}
+.calc-content  span:nth-child(24):hover{
+    opacity:0.8;
+}
+.calc-content span.invalid{
+    background:#222;
+    color:#777;
+}
+.calc-content span.invalid:hover{
+    background:#222;
+}
+/* End Calc */
+/* Start note */
+.note{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%)
+}
+.note p span{
+    color:red;
+    font-weight:bold;
+}
+.note > span{
+    display:block;
+    text-align:center;
+    color:var(--main-color);
+    font-weight:bold;
+}
+/* End note */

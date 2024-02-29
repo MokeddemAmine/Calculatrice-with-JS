@@ -1,0 +1,148 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/calc.png" alt="logo" id="brand"/>
+                    <span id="brand-name">Calculator</span>
+                </div>
+                <ul class="button">
+                    <li class="minimize">
+                        <span></span>
+                    </li>
+                    <li class="size">
+                        <span></span>
+                    </li>
+                    <li class="close">
+                        <i class="fa-classic fa-close fa-x"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="setting setting-scale">
+        <div class="setting-content">
+            <ul class="Calculator">
+                <li class="not-hover">Calculator</li>
+                <li><i class="fa-solid fa-calculator"></i><span>Standard</span></li>
+                <!-- all of the next i is invalid from me  -->
+                <li><i class="fa-solid fa-twitter"></i><span>Scientific</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Graphing</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Programmer</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Date calculation</span></li>
+            </ul>
+            <ul class="Converter">
+                <li class="not-hover">Converter</li>
+                <li><i class="fa-solid fa-twitter"></i><span>Currency</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Volume</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Length</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Weight and mass</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Temperature</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Energy</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Area</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Speed</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Time</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Power</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Data</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Pressure</span></li>
+                <li><i class="fa-solid fa-twitter"></i><span>Angle</span></li>
+            </ul>
+            <ul class="setting-btn">
+                <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="menu">
+        <div class="container">
+            <div class="menu-content">
+                <div class="menu-content-info">
+                    <div class="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-name">Standard</div>
+                </div>
+                <div class="history">
+                    <i class="fa-solid fa-refresh"></i>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="monitor">
+        <div class="container">
+            <div class="monitor-content">
+                <div class="monitor-content-text"></div>
+                <div class="monitor-content-result">0</div>
+            </div>
+        </div>
+    </section>
+    <section class="memory">
+        <div class="container">
+            <div class="memory-content">
+                <span class="hidden">MC</span>
+                <span class="hidden">MR</span>
+                <span>M+</span>
+                <span>M-</span>
+                <span>MS</span>
+                <span class="vide"></span>
+                <span class="hidden">M</span>
+            </div>
+        </div>
+    </section>
+    <section class="calc">
+        <div class="container">
+            <div class="calc-content">
+                <span id="percent" >%</span>
+                <span id="ce">CE</span>
+                <span id="clear">C</span>
+                <span id="return"><span class="delete">X</span></span>
+                <span id="reverse" >1<sub>/<sub>x</sub></sub></span>
+                <span id="power" >x<sup>2</sup></span>
+                <span id="square" >Square</span>
+                <span id="divise" >/</span>
+                <span id="seven" data-number="7" class="number">7</span>
+                <span id="eight" data-number="8" class="number">8</span>
+                <span id="nine" data-number="9" class="number">9</span>
+                <span id="multiple" >*</span>
+                <span id="four" data-number="4" class="number">4</span>
+                <span id="five" data-number="5" class="number">5</span>
+                <span id="six" data-number="6" class="number">6</span>
+                <span id="minus" ><span class="minus"></span></span>
+                <span id="one" data-number="1" class="number">1</span>
+                <span id="two" data-number='2' class="number">2</span>
+                <span id="three" data-number="3" class="number">3</span>
+                <span id="plus" >+</span>
+                <span id="plus-minus" >+<sub>/<sub><span class="minus"></span></sub></sub></span>
+                <span id="zero" data-number="0" class="number">0</span>
+                <span id="comma" >.</span>
+                <span id="equal">=</span>
+            </div>
+        </div>
+    </section>
+    <section class="note">
+        <p><span>Note </span>: This is just a copy of the calculator in windows from microsoft I can't write it completly because the copyright </p>
+        <span>thank you</span>
+    </section>
+
+    <script type="module" src="js/classUnShowOperation.js"></script>
+    <script type="module" src="js/classEqual.js"></script>
+    <script type="module" src="js/classCalc.js"></script>
+    <script type="module" src="js/classClear.js"></script>
+    <script type="module" src="js/classNumber.js"></script>
+    <script type="module" src="js/main.js"></script>
+    
+    
+</body>
+</html>
